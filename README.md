@@ -1,38 +1,63 @@
-MyAuthApp is a simple authentication app built using React Native. It allows users to sign up and log in by providing an email and password. The app provides feedback messages on successful sign-ups and logins and offers a go-back feature to navigate between screens.
-
-Features
-
-Sign Up: Users can create an account by entering their email and password.
 
 
-Login: Users can log in using their credentials, and the app will verify the entered details.
+# MyAuthApp  
 
+## Project Overview  
+MyAuthApp is a simple React Native application for user authentication. It includes **Sign Up** and **Login** screens with basic functionality like validating inputs and navigating between screens.  
 
-Navigation: The app uses React Navigation to move between screens (Home, Sign Up, Login).
+---
 
+## How to Run the Project  
 
-Minimal Design: The app is built with a clean and simple interface, providing users with an easy-to-navigate experience.
+1. **Clone the Repository**  
+   ```bash  
+   git clone <repository-url>  
+   cd MyAuthApp  
+   ```  
 
+2. **Install Dependencies**  
+   Ensure you have Node.js and npm installed. Then run:  
+   ```bash  
+   npm install  
+   ```  
 
-Feedback Messages: The app provides clear feedback messages for successful and failed actions.
+3. **Run the Project**  
+   Start the Metro Bundler:  
+   ```bash  
+   npm start  
+   ```  
+   - To test on an emulator or device:  
+     - For Android: Press **'a'** to open the Android emulator.  
+     - For iOS: Press **'i'** to open the iOS simulator (MacOS required).  
 
+---
 
-Technologies Used
+## Design Choices Made  
 
-React Native: A framework for building mobile apps using React.
+1. **Navigation**  
+   Used React Navigation for smooth navigation between screens (Sign Up, Login, and Home).  
 
-React Navigation: For navigation between different screens.
+2. **State Management**  
+   Local state was managed using `useState` hooks to handle user inputs and feedback messages.  
 
-State Management: Using React's built-in useState hook for managing form states.
+3. **Validation**  
+   Basic input validation was implemented to ensure passwords match during sign-up and to check credentials during login.  
 
+4. **Feedback**  
+   Visual feedback messages are shown for successful/failed login and signup attempts.  
 
-Usage
-Launch the app on your mobile device or simulator.
-On the home screen, you can choose to either Sign Up or Login.
-If signing up, enter an email and password, and the app will validate the inputs.
-After a successful sign-up, the app navigates to the login screen, where you can log in using the same credentials.
+5. **Reusable UI Components**  
+   Buttons, inputs, and message feedback were styled consistently to improve user experience.  
 
+---
 
-License
-This project is open-source and available under the MIT License.
+## Assumptions  
 
+1. **User Credentials**  
+   The email and password provided during signup are stored temporarily in memory (state) and used for login validation. No backend or database is connected.  
+
+2. **Basic Validation Only**  
+   Input validation checks are minimal and do not include advanced checks (e.g., email format validation).  
+
+3. **Single User Flow**  
+   The app assumes a single user flow for testing and demonstration purposes, without persistent storage.
